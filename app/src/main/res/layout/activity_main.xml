@@ -15,6 +15,6 @@
         android:id="@+id/ivPeerLogo"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="73dp"
-        android:src="@drawable/peerlogo"
+        android:src="@drawable/newname"
         />
 </RelativeLayout>
