@@ -10,8 +10,9 @@ import android.widget.ProgressBar;
 public class MainActivity extends AppCompatActivity {
 
     private ProgressBar firstBar = null;
-    private int length_in_milliseconds = 10000;
+    private int length_in_milliseconds = 3000;
     private int period_in_milliseconds = 1000;
+    private int i=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,17 +20,19 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         firstBar = (ProgressBar)findViewById(R.id.firstBar);
-        firstBar.setMax(10);
 
         CountDownTimer countDownTimer = new CountDownTimer(length_in_milliseconds,period_in_milliseconds) {
             private boolean warned = false;
             @Override
             public void onTick(long millisUntilFinished_) {
-                firstBar.setProgress((int)((length_in_milliseconds-millisUntilFinished_)/length_in_milliseconds*100.0));
+                i++;
+                firstBar.setProgress(i);
             }
 
             @Override
             public void onFinish() {
+                i++;
+                firstBar.setProgress(i);
                 Intent myIntent = new Intent(MainActivity.this, HomeActivity.class);
                 MainActivity.this.startActivity(myIntent);
             }
