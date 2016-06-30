@@ -1,5 +1,6 @@
 package com.aycron.peerandroid;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -24,6 +25,11 @@ public class HomeActivity extends AppCompatActivity  implements OnClickListener{
         messagesButton = (ImageButton) findViewById(R.id.imgMenuMessages);
         menuButton = (ImageButton) findViewById(R.id.imgMenuMenu);
 
+        resultsButton.setOnClickListener(this);
+        mapsButton.setOnClickListener(this);
+        messagesButton.setOnClickListener(this);
+        menuButton.setOnClickListener(this);
+
     }
 
     @Override
@@ -32,12 +38,16 @@ public class HomeActivity extends AppCompatActivity  implements OnClickListener{
             case R.id.imgMenuResults:
                 break;
             case R.id.imgMenuMap:
+                Intent intentMap = new Intent(HomeActivity.this, MapActivity.class);
+                startActivity(intentMap);
                 break;
             case R.id.imgMenuMessages:
+                Intent intentMessages = new Intent(HomeActivity.this, MessagesActivity.class);
+                startActivity(intentMessages);
                 break;
             case R.id.imgMenuMenu:
                 break;
-            
+
         }
     }
 }
