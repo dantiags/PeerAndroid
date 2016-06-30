@@ -34,9 +34,6 @@ public class MapActivity extends AppCompatActivity implements View.OnClickListen
                 Intent intentResults = new Intent(MapActivity.this, HomeActivity.class);
                 startActivity(intentResults);
                 break;
-            case R.id.imgMenuMap:
-
-                break;
             case R.id.imgMenuMessages:
                 Intent intentMessages = new Intent(MapActivity.this, MessagesActivity.class);
                 startActivity(intentMessages);

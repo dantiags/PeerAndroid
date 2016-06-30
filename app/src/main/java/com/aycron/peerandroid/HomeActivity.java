@@ -32,8 +32,6 @@ public class HomeActivity extends AppCompatActivity  implements OnClickListener{
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.imgMenuResults:
-                break;
             case R.id.imgMenuMap:
                 Intent intentMap = new Intent(HomeActivity.this, MapActivity.class);
                 startActivity(intentMap);
