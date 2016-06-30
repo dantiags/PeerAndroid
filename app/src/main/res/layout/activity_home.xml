@@ -54,7 +54,8 @@
         android:columnCount="2"
         android:background="#FFFFFF"
         android:layout_alignRight="@+id/imageMainPicture"
-        android:layout_alignEnd="@+id/imageMainPicture">
+        android:layout_alignEnd="@+id/imageMainPicture"
+        android:id="@+id/gridLayout">
 
         <TextView
             android:layout_width="wrap_content"
@@ -107,6 +108,59 @@
             android:paddingTop="5dp"/>
 
     </GridLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#FFFFFF"
+        >
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imgMenuResults"
+            android:src="@drawable/menuresults"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imgMenuMap"
+            android:src="@drawable/menumap"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/imgMenuResults"
+            android:layout_toEndOf="@+id/imgMenuResults" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imgMenuMessages"
+            android:src="@drawable/menumessages"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/imageYes"
+            android:layout_toStartOf="@+id/imageYes" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imgMenuMenu"
+            android:src="@drawable/menumenu"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+
+    </LinearLayout>
+
+
+
+
 
 
 </RelativeLayout>
