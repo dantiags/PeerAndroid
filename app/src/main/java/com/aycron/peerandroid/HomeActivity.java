@@ -9,7 +9,6 @@ import android.widget.ImageButton;
 
 public class HomeActivity extends AppCompatActivity  implements OnClickListener{
 
-    ImageButton resultsButton;
     ImageButton mapsButton;
     ImageButton messagesButton;
     ImageButton menuButton;
@@ -20,12 +19,10 @@ public class HomeActivity extends AppCompatActivity  implements OnClickListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        resultsButton = (ImageButton) findViewById(R.id.imgMenuResults);
         mapsButton = (ImageButton) findViewById(R.id.imgMenuMap);
         messagesButton = (ImageButton) findViewById(R.id.imgMenuMessages);
         menuButton = (ImageButton) findViewById(R.id.imgMenuMenu);
 
-        resultsButton.setOnClickListener(this);
         mapsButton.setOnClickListener(this);
         messagesButton.setOnClickListener(this);
         menuButton.setOnClickListener(this);
