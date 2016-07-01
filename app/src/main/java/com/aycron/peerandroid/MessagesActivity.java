@@ -3,11 +3,12 @@ package com.aycron.peerandroid;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.PopupMenu;
 import android.view.View;
 import android.view.View.*;
 import android.widget.ImageButton;
 
-public class MessagesActivity extends AppCompatActivity  implements OnClickListener{
+public class MessagesActivity extends BaseMenuActivity  implements OnClickListener{
 
     ImageButton resultsButton;
     ImageButton mapsButton;
@@ -24,7 +25,17 @@ public class MessagesActivity extends AppCompatActivity  implements OnClickListe
 
         mapsButton.setOnClickListener(this);
         resultsButton.setOnClickListener(this);
-        menuButton.setOnClickListener(this);
+
+        menuButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                PopupMenu popupMenu = new PopupMenu(MessagesActivity.this, view);
+                popupMenu.setOnMenuItemClickListener(MessagesActivity.this);
+                popupMenu.inflate(R.menu.popup_menu);
+                popupMenu.show();
+            }
+        });
+
     }
 
     @Override
@@ -37,8 +48,6 @@ public class MessagesActivity extends AppCompatActivity  implements OnClickListe
             case R.id.imgMenuMap:
                 Intent intentMap = new Intent(MessagesActivity.this, MapActivity.class);
                 startActivity(intentMap);
-                break;
-            case R.id.imgMenuMenu:
                 break;
 
         }

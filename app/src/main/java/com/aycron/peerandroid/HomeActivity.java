@@ -3,11 +3,14 @@ package com.aycron.peerandroid;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.PopupMenu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
-public class HomeActivity extends AppCompatActivity  implements OnClickListener{
+public class HomeActivity extends BaseMenuActivity  implements OnClickListener {
 
     ImageButton mapsButton;
     ImageButton messagesButton;
@@ -25,7 +28,16 @@ public class HomeActivity extends AppCompatActivity  implements OnClickListener{
 
         mapsButton.setOnClickListener(this);
         messagesButton.setOnClickListener(this);
-        menuButton.setOnClickListener(this);
+
+        menuButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                PopupMenu popupMenu = new PopupMenu(HomeActivity.this, view);
+                popupMenu.setOnMenuItemClickListener(HomeActivity.this);
+                popupMenu.inflate(R.menu.popup_menu);
+                popupMenu.show();
+            }
+        });
 
     }
 
@@ -40,9 +52,6 @@ public class HomeActivity extends AppCompatActivity  implements OnClickListener{
                 Intent intentMessages = new Intent(HomeActivity.this, MessagesActivity.class);
                 startActivity(intentMessages);
                 break;
-            case R.id.imgMenuMenu:
-                break;
-
         }
     }
 }
