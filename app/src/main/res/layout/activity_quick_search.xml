@@ -9,4 +9,53 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.aycron.peerandroid.QuickSearchActivity">
 
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#FFFFFF"
+        >
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imgMenuResults"
+            android:src="@drawable/menuresults_disabled"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imgMenuMap"
+            android:src="@drawable/menumap_disabled"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/imgMenuResults"
+            android:layout_toEndOf="@+id/imgMenuResults" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imgMenuMessages"
+            android:src="@drawable/menumessages"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/imageYes"
+            android:layout_toStartOf="@+id/imageYes" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imgMenuMenu"
+            android:src="@drawable/menumenu_disabled"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+
+    </LinearLayout>
+
 </RelativeLayout>
