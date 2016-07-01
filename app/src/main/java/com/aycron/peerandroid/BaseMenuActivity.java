@@ -1,5 +1,6 @@
 package com.aycron.peerandroid;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.PopupMenu;
@@ -17,31 +18,37 @@ public class BaseMenuActivity extends AppCompatActivity implements PopupMenu.OnM
     public boolean onMenuItemClick(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.item_profile:
-                Toast.makeText(this, "Comedy Clicked", Toast.LENGTH_SHORT).show();
-                return true;
+                Intent intentProfile = new Intent(BaseMenuActivity.this, ProfileActivity.class);
+                startActivity(intentProfile);
+                break;
             case R.id.item_results:
-                Toast.makeText(this, "Movies Clicked", Toast.LENGTH_SHORT).show();
-                return true;
+                Intent intentResults = new Intent(BaseMenuActivity.this, HomeActivity.class);
+                startActivity(intentResults);
+                break;
             case R.id.item_quicksearch:
-                Toast.makeText(this, "Music Clicked", Toast.LENGTH_SHORT).show();
-                return true;
+                Intent quickSearchIntent = new Intent(BaseMenuActivity.this, QuickSearchActivity.class);
+                startActivity(quickSearchIntent);
+                break;
             case R.id.item_match:
-                Toast.makeText(this, "Music Clicked", Toast.LENGTH_SHORT).show();
-                return true;
+                Intent intentMatch = new Intent(BaseMenuActivity.this, MakeAMatchActivity.class);
+                startActivity(intentMatch);
+                break;
             case R.id.item_rate:
-                Toast.makeText(this, "Music Clicked", Toast.LENGTH_SHORT).show();
-                return true;
+                Toast.makeText(this, "Rate Clicked", Toast.LENGTH_SHORT).show();
+                break;
             case R.id.item_tell:
-                Toast.makeText(this, "Music Clicked", Toast.LENGTH_SHORT).show();
-                return true;
+                Toast.makeText(this, "Tell A Friend Clicked", Toast.LENGTH_SHORT).show();
+                break;
             case R.id.item_social:
-                Toast.makeText(this, "Music Clicked", Toast.LENGTH_SHORT).show();
-                return true;
+                Intent socialIntent = new Intent(BaseMenuActivity.this, SocialMediaLinkActivity.class);
+                startActivity(socialIntent);
+                break;
             case R.id.item_notification:
-                Toast.makeText(this, "Music Clicked", Toast.LENGTH_SHORT).show();
-                return true;
+                Intent notificationIntent = new Intent(BaseMenuActivity.this, NotificationSettingsActivity.class);
+                startActivity(notificationIntent);
+                break;
         }
-        return false;
+        return true;
     }
 
 }

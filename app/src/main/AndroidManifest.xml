@@ -36,7 +36,12 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".BaseMenuActivity"></activity>
+        <activity android:name=".BaseMenuActivity" />
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".QuickSearchActivity" />
+        <activity android:name=".MakeAMatchActivity" />
+        <activity android:name=".SocialMediaLinkActivity" />
+        <activity android:name=".NotificationSettingsActivity"></activity>
     </application>
 
 </manifest>
