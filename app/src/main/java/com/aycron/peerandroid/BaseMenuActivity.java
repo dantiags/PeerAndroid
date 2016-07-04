@@ -7,11 +7,15 @@ import android.support.v7.widget.PopupMenu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.aycron.peerandroid.exceptions.ExceptionHandler;
+
 public class BaseMenuActivity extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        Thread.setDefaultUncaughtExceptionHandler(new ExceptionHandler(this));
     }
 
 
