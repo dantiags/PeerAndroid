@@ -78,7 +78,8 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".exceptions.ErrorActivity"></activity>
+        <activity android:name=".exceptions.ErrorActivity" />
+        <activity android:name=".Match2Activity"></activity>
     </application>
 
 </manifest>

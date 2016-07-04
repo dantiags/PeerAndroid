@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000"
-    tools:context="com.aycron.peerandroid.HomeActivity">
+    tools:context="com.aycron.peerandroid.Match2Activity">
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -37,11 +37,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageMainPicture"
-        android:src="@drawable/matchpicture"
+        android:src="@drawable/match2image"
         android:background="#000"
         android:layout_below="@+id/imageNo"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="44dp" />
+        android:layout_marginTop="10dp" />
 
 
     <GridLayout
@@ -60,7 +60,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Name: Andy Dufresne"
+            android:text="Name: Raistlin Majer.."
             android:id="@+id/tvName"
             android:paddingLeft="10dp"
             android:paddingBottom="5dp"
@@ -70,7 +70,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Friends: 0"
+            android:text="Friends: 5"
             android:id="@+id/tvFriends"
             android:paddingLeft="10dp"
             android:paddingBottom="5dp"
@@ -80,7 +80,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Age: 0"
+            android:text="Age: 28"
             android:id="@+id/tvAge"
             android:paddingLeft="10dp"
             android:paddingBottom="5dp"
@@ -100,7 +100,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Rating: 5"
+            android:text="Rating: 10"
             android:id="@+id/tvRating"
             android:paddingLeft="10dp"
             android:paddingBottom="5dp"
@@ -122,5 +122,6 @@
 
         </include>
     </LinearLayout>
+
 
 </RelativeLayout>
