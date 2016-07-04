@@ -25,44 +25,9 @@
         android:layout_alignParentStart="true"
         android:background="#FFFFFF"
         >
+        <include layout="@layout/menu_bar_layout" >
 
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imgMenuResults"
-            android:src="@drawable/menuresults_disabled"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imgMenuMap"
-            android:src="@drawable/menumap"
-            android:layout_alignParentBottom="true"
-            android:layout_toRightOf="@+id/imgMenuResults"
-            android:layout_toEndOf="@+id/imgMenuResults" />
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imgMenuMessages"
-            android:src="@drawable/menumessages_disabled"
-            android:layout_alignParentBottom="true"
-            android:layout_toLeftOf="@+id/imageYes"
-            android:layout_toStartOf="@+id/imageYes" />
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imgMenuMenu"
-            android:src="@drawable/menumenu_disabled"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
-
-
+        </include>
     </LinearLayout>
 
 

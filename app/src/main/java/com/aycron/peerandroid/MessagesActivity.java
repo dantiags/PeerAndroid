@@ -13,6 +13,7 @@ public class MessagesActivity extends BaseMenuActivity  implements OnClickListen
     ImageButton resultsButton;
     ImageButton mapsButton;
     ImageButton menuButton;
+    ImageButton messagesButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +23,9 @@ public class MessagesActivity extends BaseMenuActivity  implements OnClickListen
         mapsButton = (ImageButton) findViewById(R.id.imgMenuMap);
         resultsButton = (ImageButton) findViewById(R.id.imgMenuResults);
         menuButton = (ImageButton) findViewById(R.id.imgMenuMenu);
+        messagesButton = (ImageButton) findViewById(R.id.imgMenuMessages);
+
+        messagesButton.setImageResource(R.drawable.menumessages);
 
         mapsButton.setOnClickListener(this);
         resultsButton.setOnClickListener(this);

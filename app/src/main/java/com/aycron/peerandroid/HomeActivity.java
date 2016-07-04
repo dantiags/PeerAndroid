@@ -1,6 +1,7 @@
 package com.aycron.peerandroid;
 
 import android.content.Intent;
+import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.PopupMenu;
@@ -12,6 +13,7 @@ import android.widget.Toast;
 
 public class HomeActivity extends BaseMenuActivity  implements OnClickListener {
 
+    ImageButton resultsButton;
     ImageButton mapsButton;
     ImageButton messagesButton;
     ImageButton menuButton;
@@ -27,15 +29,16 @@ public class HomeActivity extends BaseMenuActivity  implements OnClickListener {
         mapsButton = (ImageButton) findViewById(R.id.imgMenuMap);
         messagesButton = (ImageButton) findViewById(R.id.imgMenuMessages);
         menuButton = (ImageButton) findViewById(R.id.imgMenuMenu);
-
+        resultsButton = (ImageButton) findViewById(R.id.imgMenuResults);
         yesButton = (ImageButton) findViewById(R.id.imageYes);
         noButton = (ImageButton) findViewById(R.id.imageNo);
+
+        resultsButton.setImageResource(R.drawable.menuresults);
 
         mapsButton.setOnClickListener(this);
         messagesButton.setOnClickListener(this);
         yesButton.setOnClickListener(this);
         noButton.setOnClickListener(this);
-
         menuButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

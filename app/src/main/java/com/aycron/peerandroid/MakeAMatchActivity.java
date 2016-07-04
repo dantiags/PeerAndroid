@@ -29,6 +29,8 @@ public class MakeAMatchActivity extends BaseMenuActivity  implements View.OnClic
         mapsButton.setOnClickListener(this);
         resultsButton.setOnClickListener(this);
 
+        menuButton.setImageResource(R.drawable.menumenu);
+
         menuButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

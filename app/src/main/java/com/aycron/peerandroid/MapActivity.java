@@ -12,15 +12,19 @@ public class MapActivity extends BaseMenuActivity implements View.OnClickListene
     ImageButton resultsButton;
     ImageButton messagesButton;
     ImageButton menuButton;
+    ImageButton mapsButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map);
 
+        mapsButton = (ImageButton) findViewById(R.id.imgMenuMap);
         resultsButton = (ImageButton) findViewById(R.id.imgMenuResults);
         messagesButton = (ImageButton) findViewById(R.id.imgMenuMessages);
         menuButton = (ImageButton) findViewById(R.id.imgMenuMenu);
+
+        mapsButton.setImageResource(R.drawable.menumap);
 
         resultsButton.setOnClickListener(this);
         messagesButton.setOnClickListener(this);

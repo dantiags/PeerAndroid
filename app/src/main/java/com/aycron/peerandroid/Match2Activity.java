@@ -9,6 +9,7 @@ import android.widget.ImageButton;
 
 public class Match2Activity extends BaseMenuActivity implements View.OnClickListener {
 
+    ImageButton resultsButton;
     ImageButton mapsButton;
     ImageButton messagesButton;
     ImageButton menuButton;
@@ -23,9 +24,11 @@ public class Match2Activity extends BaseMenuActivity implements View.OnClickList
         mapsButton = (ImageButton) findViewById(R.id.imgMenuMap);
         messagesButton = (ImageButton) findViewById(R.id.imgMenuMessages);
         menuButton = (ImageButton) findViewById(R.id.imgMenuMenu);
-
+        resultsButton = (ImageButton) findViewById(R.id.imgMenuResults);
         yesButton = (ImageButton) findViewById(R.id.imageYes);
         noButton = (ImageButton) findViewById(R.id.imageNo);
+
+        resultsButton.setImageResource(R.drawable.menuresults);
 
         mapsButton.setOnClickListener(this);
         messagesButton.setOnClickListener(this);
