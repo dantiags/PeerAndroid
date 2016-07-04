@@ -5,7 +5,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.PopupMenu;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 public class NotificationSettingsActivity extends BaseMenuActivity  implements View.OnClickListener{
 
@@ -13,6 +15,8 @@ public class NotificationSettingsActivity extends BaseMenuActivity  implements V
     ImageButton messagesButton;
     ImageButton menuButton;
     ImageButton resultsButton;
+
+    Button saveButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,12 +27,14 @@ public class NotificationSettingsActivity extends BaseMenuActivity  implements V
         mapsButton = (ImageButton) findViewById(R.id.imgMenuMap);
         resultsButton = (ImageButton) findViewById(R.id.imgMenuResults);
         menuButton = (ImageButton) findViewById(R.id.imgMenuMenu);
+        saveButton = (Button) findViewById(R.id.btnSaveNotificationSettings);
 
         menuButton.setImageResource(R.drawable.menumenu);
 
         messagesButton.setOnClickListener(this);
         mapsButton.setOnClickListener(this);
         resultsButton.setOnClickListener(this);
+        saveButton.setOnClickListener(this);
 
         menuButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,6 +62,9 @@ public class NotificationSettingsActivity extends BaseMenuActivity  implements V
             case R.id.imgMenuMap:
                 Intent intentMap = new Intent(NotificationSettingsActivity.this, MapActivity.class);
                 startActivity(intentMap);
+                break;
+            case R.id.btnSaveNotificationSettings:
+                Toast.makeText(this, "Settings Saved!!", Toast.LENGTH_LONG).show();
                 break;
         }
     }

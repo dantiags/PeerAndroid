@@ -5,13 +5,96 @@
     android:layout_height="match_parent"
     tools:context="com.aycron.peerandroid.NotificationSettingsActivity">
 
-    <ImageView
+
+    <GridLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/imgMessages"
-        android:src="@drawable/notifsettings"
-        android:layout_weight="1"
-        />
+        android:columnCount="2"
+        android:orientation="horizontal"
+        android:rowCount="6"
+        android:id="@+id/gridLayoutNotificationSettings"
+        android:layout_margin="30dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Likes"
+            android:id="@+id/txtViewLikes"
+            android:layout_columnSpan="1"
+            android:layout_gravity="fill"
+            android:layout_rowSpan="1" />
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_gravity="fill"
+            android:id="@+id/switchLikes"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="New Matches"
+            android:id="@+id/txtViewNewMatches"
+            android:layout_gravity="fill"
+            android:layout_columnSpan="1"
+            android:layout_rowSpan="1" />
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_gravity="fill"
+            android:id="@+id/switchNewMatches"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Messages"
+            android:id="@+id/txtViewMessages"
+            android:layout_gravity="fill"
+            android:layout_columnSpan="1"
+            android:layout_rowSpan="1" />
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_gravity="fill"
+            android:id="@+id/switchMessages"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Anonymous Messages"
+            android:id="@+id/txtAnonymousMessages"
+            android:layout_gravity="fill"
+            android:layout_columnSpan="1"
+            android:layout_rowSpan="1" />
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_gravity="fill"
+            android:id="@+id/switchAnonymousMessages"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:layout_row="5"
+            android:layout_columnSpan="2"
+            android:layout_gravity="center_horizontal"
+            android:layout_rowSpan="1"
+            android:id="@+id/btnSaveNotificationSettings"
+            android:layout_marginTop="50dp" />
+
+    </GridLayout>
 
     <LinearLayout
         android:orientation="horizontal"
@@ -21,10 +104,12 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:background="#FFFFFF"
-        >
+        android:id="@+id/linearLayout">
         <include layout="@layout/menu_bar_layout" >
 
         </include>
     </LinearLayout>
+
+
 
 </RelativeLayout>
