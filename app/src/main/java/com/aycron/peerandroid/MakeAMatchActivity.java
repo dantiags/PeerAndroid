@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.PopupMenu;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.ImageButton;
 
@@ -31,7 +32,7 @@ public class MakeAMatchActivity extends BaseMenuActivity  implements View.OnClic
         menuButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                PopupMenu popupMenu = new PopupMenu(MakeAMatchActivity.this, view);
+                PopupMenu popupMenu = new PopupMenu(MakeAMatchActivity.this, view, Gravity.CENTER);
                 popupMenu.setOnMenuItemClickListener(MakeAMatchActivity.this);
                 popupMenu.inflate(R.menu.popup_menu);
                 popupMenu.show();

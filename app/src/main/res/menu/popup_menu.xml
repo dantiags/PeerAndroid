@@ -3,44 +3,38 @@
 
     <item
         android:id="@+id/item_profile"
-        android:showAsAction="ifRoom|withText"
         android:title="Profile"
-        android:visible="true"/>
+        android:visible="true"
+
+        />
     <item
         android:id="@+id/item_results"
-        android:showAsAction="ifRoom|withText"
         android:title="Results"
         android:visible="true"/>
     <item
         android:id="@+id/item_quicksearch"
-        android:showAsAction="ifRoom|withText"
         android:title="Quick Search"
         android:visible="true"/>
     <item
         android:id="@+id/item_match"
-        android:showAsAction="ifRoom|withText"
         android:title="Make a Match"
         android:visible="true"/>
     <item
         android:id="@+id/item_rate"
-        android:showAsAction="ifRoom|withText"
         android:title="Rate"
         android:visible="true"/>
     <item
         android:id="@+id/item_tell"
-        android:showAsAction="ifRoom|withText"
         android:title="Tell Friends"
         android:visible="true"/>
 
     <item
         android:id="@+id/item_social"
-        android:showAsAction="ifRoom|withText"
         android:title="Social Media Link"
         android:visible="true"/>
 
     <item
         android:id="@+id/item_notification"
-        android:showAsAction="ifRoom|withText"
         android:title="Notification Settings"
         android:visible="true"/>
 
