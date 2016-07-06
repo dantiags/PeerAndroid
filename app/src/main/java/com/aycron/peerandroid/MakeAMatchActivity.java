@@ -11,11 +11,6 @@ import android.widget.ImageButton;
 
 public class MakeAMatchActivity extends BaseMenuActivity  implements View.OnClickListener {
 
-    ImageButton mapsButton;
-    ImageButton messagesButton;
-    ImageButton menuButton;
-    ImageButton resultsButton;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,21 +25,12 @@ public class MakeAMatchActivity extends BaseMenuActivity  implements View.OnClic
         messagesButton = (ImageButton) findViewById(R.id.imgMenuMessages);
         mapsButton = (ImageButton) findViewById(R.id.imgMenuMap);
         resultsButton = (ImageButton) findViewById(R.id.imgMenuResults);
-        menuButton = (ImageButton) findViewById(R.id.imgMenuMenu);
+        profileButton = (ImageButton) findViewById(R.id.imgMenuProfile);
 
         messagesButton.setOnClickListener(this);
         mapsButton.setOnClickListener(this);
         resultsButton.setOnClickListener(this);
-
-        menuButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                PopupMenu popupMenu = new PopupMenu(MakeAMatchActivity.this, view, Gravity.CENTER);
-                popupMenu.setOnMenuItemClickListener(MakeAMatchActivity.this);
-                popupMenu.inflate(R.menu.popup_menu);
-                popupMenu.show();
-            }
-        });
+        profileButton.setOnClickListener(this);
 
     }
 
@@ -62,6 +48,10 @@ public class MakeAMatchActivity extends BaseMenuActivity  implements View.OnClic
             case R.id.imgMenuMap:
                 Intent intentMap = new Intent(MakeAMatchActivity.this, MapActivity.class);
                 startActivity(intentMap);
+                break;
+            case R.id.imgMenuProfile:
+                Intent intentProfile = new Intent(MakeAMatchActivity.this, ProfileActivity.class);
+                startActivity(intentProfile);
                 break;
         }
     }

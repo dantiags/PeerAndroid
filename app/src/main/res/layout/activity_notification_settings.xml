@@ -12,101 +12,106 @@
         android:layout_height="wrap_content"/>
 
     <!-- Rest of content for the activity -->
-
-
-    <GridLayout
+    <ScrollView
+        android:id="@+id/notificationSettingsForm"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:columnCount="2"
-        android:orientation="horizontal"
-        android:rowCount="6"
-        android:id="@+id/gridLayoutNotificationSettings"
-        android:layout_marginBottom="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginTop="100dp"
+        android:layout_height="match_parent"
         >
 
-        <TextView
-            android:layout_width="wrap_content"
+        <GridLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Likes"
-            android:id="@+id/txtViewLikes"
-            android:layout_columnSpan="1"
-            android:layout_gravity="fill"
-            android:layout_rowSpan="1" />
+            android:columnCount="2"
+            android:orientation="horizontal"
+            android:rowCount="6"
+            android:id="@+id/gridLayoutNotificationSettings"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="100dp"
+            >
 
-        <Switch
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:layout_gravity="fill"
-            android:id="@+id/switchLikes"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Likes"
+                android:id="@+id/txtViewLikes"
+                android:layout_columnSpan="1"
+                android:layout_gravity="fill"
+                android:layout_rowSpan="1" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="New Matches"
-            android:id="@+id/txtViewNewMatches"
-            android:layout_gravity="fill"
-            android:layout_columnSpan="1"
-            android:layout_rowSpan="1" />
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_gravity="fill"
+                android:id="@+id/switchLikes"/>
 
-        <Switch
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:layout_gravity="fill"
-            android:id="@+id/switchNewMatches"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="New Matches"
+                android:id="@+id/txtViewNewMatches"
+                android:layout_gravity="fill"
+                android:layout_columnSpan="1"
+                android:layout_rowSpan="1" />
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_gravity="fill"
+                android:id="@+id/switchNewMatches"/>
 
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Messages"
-            android:id="@+id/txtViewMessages"
-            android:layout_gravity="fill"
-            android:layout_columnSpan="1"
-            android:layout_rowSpan="1" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Messages"
+                android:id="@+id/txtViewMessages"
+                android:layout_gravity="fill"
+                android:layout_columnSpan="1"
+                android:layout_rowSpan="1" />
 
-        <Switch
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:layout_gravity="fill"
-            android:id="@+id/switchMessages"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Anonymous Messages"
-            android:id="@+id/txtAnonymousMessages"
-            android:layout_gravity="fill"
-            android:layout_columnSpan="1"
-            android:layout_rowSpan="1" />
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_gravity="fill"
+                android:id="@+id/switchMessages"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Anonymous Messages"
+                android:id="@+id/txtAnonymousMessages"
+                android:layout_gravity="fill"
+                android:layout_columnSpan="1"
+                android:layout_rowSpan="1" />
 
-        <Switch
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:layout_gravity="fill"
-            android:id="@+id/switchAnonymousMessages"/>
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_gravity="fill"
+                android:id="@+id/switchAnonymousMessages"/>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Save"
-            android:layout_row="5"
-            android:layout_columnSpan="2"
-            android:layout_gravity="center_horizontal"
-            android:layout_rowSpan="1"
-            android:id="@+id/btnSaveNotificationSettings"
-            android:layout_marginTop="50dp" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save"
+                android:layout_row="5"
+                android:layout_columnSpan="2"
+                android:layout_gravity="center_horizontal"
+                android:layout_rowSpan="1"
+                android:id="@+id/btnSaveNotificationSettings"
+                android:layout_marginTop="50dp" />
 
-    </GridLayout>
+        </GridLayout>
+    </ScrollView>
 
     <LinearLayout
         android:orientation="horizontal"

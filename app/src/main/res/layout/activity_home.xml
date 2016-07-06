@@ -25,7 +25,7 @@
         android:layout_alignStart="@+id/imageMainPicture"
         android:layout_marginLeft="40dp"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="20dp" />
+        android:layout_marginTop="70dp" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -39,7 +39,7 @@
         android:layout_below="@+id/imageNo"
         android:layout_alignRight="@+id/imageMainPicture"
         android:layout_alignEnd="@+id/imageMainPicture"
-        android:layout_marginTop="20dp" />
+        android:layout_marginTop="70dp" />
 
     <ImageButton
         android:layout_width="wrap_content"

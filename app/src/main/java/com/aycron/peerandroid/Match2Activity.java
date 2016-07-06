@@ -10,10 +10,6 @@ import android.widget.ImageButton;
 
 public class Match2Activity extends BaseMenuActivity implements View.OnClickListener {
 
-    ImageButton resultsButton;
-    ImageButton mapsButton;
-    ImageButton messagesButton;
-    ImageButton menuButton;
     ImageButton yesButton;
     ImageButton noButton;
 
@@ -28,28 +24,21 @@ public class Match2Activity extends BaseMenuActivity implements View.OnClickList
         // Make sure the toolbar exists in the activity and is not null
         setSupportActionBar(toolbar);
 
-        mapsButton = (ImageButton) findViewById(R.id.imgMenuMap);
-        messagesButton = (ImageButton) findViewById(R.id.imgMenuMessages);
-        menuButton = (ImageButton) findViewById(R.id.imgMenuMenu);
-        resultsButton = (ImageButton) findViewById(R.id.imgMenuResults);
         yesButton = (ImageButton) findViewById(R.id.imageYes);
         noButton = (ImageButton) findViewById(R.id.imageNo);
 
-
-        mapsButton.setOnClickListener(this);
-        messagesButton.setOnClickListener(this);
         yesButton.setOnClickListener(this);
         noButton.setOnClickListener(this);
 
-        menuButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                PopupMenu popupMenu = new PopupMenu(Match2Activity.this, view);
-                popupMenu.setOnMenuItemClickListener(Match2Activity.this);
-                popupMenu.inflate(R.menu.popup_menu);
-                popupMenu.show();
-            }
-        });
+        messagesButton = (ImageButton) findViewById(R.id.imgMenuMessages);
+        mapsButton = (ImageButton) findViewById(R.id.imgMenuMap);
+        resultsButton = (ImageButton) findViewById(R.id.imgMenuResults);
+        profileButton = (ImageButton) findViewById(R.id.imgMenuProfile);
+
+        messagesButton.setOnClickListener(this);
+        mapsButton.setOnClickListener(this);
+        resultsButton.setOnClickListener(this);
+        profileButton.setOnClickListener(this);
     }
 
 
@@ -64,6 +53,11 @@ public class Match2Activity extends BaseMenuActivity implements View.OnClickList
             case R.id.imgMenuMessages:
                 Intent intentMessages = new Intent(Match2Activity.this, MessagesActivity.class);
                 startActivity(intentMessages);
+                break;
+
+            case R.id.imgMenuProfile:
+                Intent intentProfile = new Intent(Match2Activity.this, ProfileActivity.class);
+                startActivity(intentProfile);
                 break;
 
             case R.id.imageYes:

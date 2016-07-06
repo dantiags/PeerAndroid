@@ -14,10 +14,6 @@ import android.widget.Toast;
 
 public class HomeActivity extends BaseMenuActivity  implements OnClickListener {
 
-    ImageButton resultsButton;
-    ImageButton mapsButton;
-    ImageButton messagesButton;
-    ImageButton menuButton;
     ImageButton yesButton;
     ImageButton noButton;
 
@@ -33,27 +29,19 @@ public class HomeActivity extends BaseMenuActivity  implements OnClickListener {
         // Make sure the toolbar exists in the activity and is not null
         setSupportActionBar(toolbar);
 
-
         mapsButton = (ImageButton) findViewById(R.id.imgMenuMap);
         messagesButton = (ImageButton) findViewById(R.id.imgMenuMessages);
-        menuButton = (ImageButton) findViewById(R.id.imgMenuMenu);
+        profileButton = (ImageButton) findViewById(R.id.imgMenuProfile);
         resultsButton = (ImageButton) findViewById(R.id.imgMenuResults);
         yesButton = (ImageButton) findViewById(R.id.imageYes);
         noButton = (ImageButton) findViewById(R.id.imageNo);
 
         mapsButton.setOnClickListener(this);
         messagesButton.setOnClickListener(this);
+        profileButton.setOnClickListener(this);
         yesButton.setOnClickListener(this);
         noButton.setOnClickListener(this);
-        menuButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                PopupMenu popupMenu = new PopupMenu(HomeActivity.this, view);
-                popupMenu.setOnMenuItemClickListener(HomeActivity.this);
-                popupMenu.inflate(R.menu.popup_menu);
-                popupMenu.show();
-            }
-        });
+
 
     }
 
@@ -68,6 +56,11 @@ public class HomeActivity extends BaseMenuActivity  implements OnClickListener {
             case R.id.imgMenuMessages:
                 Intent intentMessages = new Intent(HomeActivity.this, MessagesActivity.class);
                 startActivity(intentMessages);
+                break;
+
+            case R.id.imgMenuProfile:
+                Intent intentProfile = new Intent(HomeActivity.this, ProfileActivity.class);
+                startActivity(intentProfile);
                 break;
 
             case R.id.imageYes:

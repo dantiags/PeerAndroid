@@ -11,11 +11,6 @@ import android.widget.ImageButton;
 
 public class MessagesActivity extends BaseMenuActivity  implements OnClickListener{
 
-    ImageButton resultsButton;
-    ImageButton mapsButton;
-    ImageButton menuButton;
-    ImageButton messagesButton;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,23 +22,15 @@ public class MessagesActivity extends BaseMenuActivity  implements OnClickListen
         // Make sure the toolbar exists in the activity and is not null
         setSupportActionBar(toolbar);
 
+        messagesButton = (ImageButton) findViewById(R.id.imgMenuMessages);
         mapsButton = (ImageButton) findViewById(R.id.imgMenuMap);
         resultsButton = (ImageButton) findViewById(R.id.imgMenuResults);
-        menuButton = (ImageButton) findViewById(R.id.imgMenuMenu);
-        messagesButton = (ImageButton) findViewById(R.id.imgMenuMessages);
+        profileButton = (ImageButton) findViewById(R.id.imgMenuProfile);
 
+        messagesButton.setOnClickListener(this);
         mapsButton.setOnClickListener(this);
         resultsButton.setOnClickListener(this);
-
-        menuButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                PopupMenu popupMenu = new PopupMenu(MessagesActivity.this, view);
-                popupMenu.setOnMenuItemClickListener(MessagesActivity.this);
-                popupMenu.inflate(R.menu.popup_menu);
-                popupMenu.show();
-            }
-        });
+        profileButton.setOnClickListener(this);
 
     }
 
@@ -57,6 +44,10 @@ public class MessagesActivity extends BaseMenuActivity  implements OnClickListen
             case R.id.imgMenuMap:
                 Intent intentMap = new Intent(MessagesActivity.this, MapActivity.class);
                 startActivity(intentMap);
+                break;
+            case R.id.imgMenuProfile:
+                Intent intentProfile = new Intent(MessagesActivity.this, ProfileActivity.class);
+                startActivity(intentProfile);
                 break;
 
         }

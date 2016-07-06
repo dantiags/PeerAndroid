@@ -12,11 +12,6 @@ import android.widget.Toast;
 
 public class NotificationSettingsActivity extends BaseMenuActivity  implements View.OnClickListener{
 
-    ImageButton mapsButton;
-    ImageButton messagesButton;
-    ImageButton menuButton;
-    ImageButton resultsButton;
-
     Button saveButton;
 
     @Override
@@ -30,27 +25,19 @@ public class NotificationSettingsActivity extends BaseMenuActivity  implements V
         // Make sure the toolbar exists in the activity and is not null
         setSupportActionBar(toolbar);
 
+
+        saveButton = (Button) findViewById(R.id.btnSaveNotificationSettings);
+        saveButton.setOnClickListener(this);
+
         messagesButton = (ImageButton) findViewById(R.id.imgMenuMessages);
         mapsButton = (ImageButton) findViewById(R.id.imgMenuMap);
         resultsButton = (ImageButton) findViewById(R.id.imgMenuResults);
-        menuButton = (ImageButton) findViewById(R.id.imgMenuMenu);
-        saveButton = (Button) findViewById(R.id.btnSaveNotificationSettings);
+        profileButton = (ImageButton) findViewById(R.id.imgMenuProfile);
 
         messagesButton.setOnClickListener(this);
         mapsButton.setOnClickListener(this);
         resultsButton.setOnClickListener(this);
-        saveButton.setOnClickListener(this);
-
-        menuButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                PopupMenu popupMenu = new PopupMenu(NotificationSettingsActivity.this, view);
-                popupMenu.setOnMenuItemClickListener(NotificationSettingsActivity.this);
-                popupMenu.inflate(R.menu.popup_menu);
-                popupMenu.show();
-            }
-        });
-
+        profileButton.setOnClickListener(this);
     }
 
     @Override
@@ -67,6 +54,10 @@ public class NotificationSettingsActivity extends BaseMenuActivity  implements V
             case R.id.imgMenuMap:
                 Intent intentMap = new Intent(NotificationSettingsActivity.this, MapActivity.class);
                 startActivity(intentMap);
+                break;
+            case R.id.imgMenuProfile:
+                Intent intentProfile = new Intent(NotificationSettingsActivity.this, ProfileActivity.class);
+                startActivity(intentProfile);
                 break;
             case R.id.btnSaveNotificationSettings:
                 Toast.makeText(this, "Settings Saved!!", Toast.LENGTH_LONG).show();

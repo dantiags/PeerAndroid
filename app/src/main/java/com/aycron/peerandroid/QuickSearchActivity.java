@@ -10,11 +10,6 @@ import android.widget.ImageButton;
 
 public class QuickSearchActivity extends BaseMenuActivity implements View.OnClickListener {
 
-    ImageButton mapsButton;
-    ImageButton messagesButton;
-    ImageButton menuButton;
-    ImageButton resultsButton;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,21 +24,13 @@ public class QuickSearchActivity extends BaseMenuActivity implements View.OnClic
         messagesButton = (ImageButton) findViewById(R.id.imgMenuMessages);
         mapsButton = (ImageButton) findViewById(R.id.imgMenuMap);
         resultsButton = (ImageButton) findViewById(R.id.imgMenuResults);
-        menuButton = (ImageButton) findViewById(R.id.imgMenuMenu);
+        profileButton = (ImageButton) findViewById(R.id.imgMenuProfile);
 
         messagesButton.setOnClickListener(this);
         mapsButton.setOnClickListener(this);
         resultsButton.setOnClickListener(this);
+        profileButton.setOnClickListener(this);
 
-        menuButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                PopupMenu popupMenu = new PopupMenu(QuickSearchActivity.this, view);
-                popupMenu.setOnMenuItemClickListener(QuickSearchActivity.this);
-                popupMenu.inflate(R.menu.popup_menu);
-                popupMenu.show();
-            }
-        });
     }
 
 
@@ -61,6 +48,10 @@ public class QuickSearchActivity extends BaseMenuActivity implements View.OnClic
             case R.id.imgMenuMap:
                 Intent intentMap = new Intent(QuickSearchActivity.this, MapActivity.class);
                 startActivity(intentMap);
+                break;
+            case R.id.imgMenuProfile:
+                Intent intentProfile = new Intent(QuickSearchActivity.this, ProfileActivity.class);
+                startActivity(intentProfile);
                 break;
         }
     }

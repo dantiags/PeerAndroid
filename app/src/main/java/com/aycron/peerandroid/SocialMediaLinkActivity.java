@@ -10,11 +10,6 @@ import android.widget.ImageButton;
 
 public class SocialMediaLinkActivity extends BaseMenuActivity  implements View.OnClickListener{
 
-    ImageButton mapsButton;
-    ImageButton messagesButton;
-    ImageButton menuButton;
-    ImageButton resultsButton;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,21 +24,12 @@ public class SocialMediaLinkActivity extends BaseMenuActivity  implements View.O
         messagesButton = (ImageButton) findViewById(R.id.imgMenuMessages);
         mapsButton = (ImageButton) findViewById(R.id.imgMenuMap);
         resultsButton = (ImageButton) findViewById(R.id.imgMenuResults);
-        menuButton = (ImageButton) findViewById(R.id.imgMenuMenu);
+        profileButton = (ImageButton) findViewById(R.id.imgMenuProfile);
 
         messagesButton.setOnClickListener(this);
         mapsButton.setOnClickListener(this);
         resultsButton.setOnClickListener(this);
-
-        menuButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                PopupMenu popupMenu = new PopupMenu(SocialMediaLinkActivity.this, view);
-                popupMenu.setOnMenuItemClickListener(SocialMediaLinkActivity.this);
-                popupMenu.inflate(R.menu.popup_menu);
-                popupMenu.show();
-            }
-        });
+        profileButton.setOnClickListener(this);
     }
 
     @Override
@@ -60,6 +46,10 @@ public class SocialMediaLinkActivity extends BaseMenuActivity  implements View.O
             case R.id.imgMenuMap:
                 Intent intentMap = new Intent(SocialMediaLinkActivity.this, MapActivity.class);
                 startActivity(intentMap);
+                break;
+            case R.id.imgMenuProfile:
+                Intent intentProfile = new Intent(SocialMediaLinkActivity.this, ProfileActivity.class);
+                startActivity(intentProfile);
                 break;
         }
     }

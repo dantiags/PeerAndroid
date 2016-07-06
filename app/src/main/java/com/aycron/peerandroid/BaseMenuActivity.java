@@ -6,11 +6,18 @@ import android.os.Bundle;
 import android.support.v7.widget.PopupMenu;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.aycron.peerandroid.exceptions.ExceptionHandler;
 
 public class BaseMenuActivity extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener {
+
+    ImageButton mapsButton;
+    ImageButton messagesButton;
+    ImageButton profileButton;
+    ImageButton resultsButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +34,24 @@ public class BaseMenuActivity extends AppCompatActivity implements PopupMenu.OnM
         return true;
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle presses on the action bar items
+        switch (item.getItemId()) {
+            case R.id.miMenu:
+                View menuItem = findViewById(R.id.miMenu);
+                PopupMenu popupMenu = new PopupMenu(BaseMenuActivity.this, menuItem);
+                popupMenu.setOnMenuItemClickListener(BaseMenuActivity.this);
+                popupMenu.inflate(R.menu.popup_menu);
+                popupMenu.show();
+                break;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+        return false;
+    }
+
+    @Override
     public boolean onMenuItemClick(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.item_profile:

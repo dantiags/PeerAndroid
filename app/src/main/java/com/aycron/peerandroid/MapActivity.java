@@ -10,11 +10,6 @@ import android.widget.ImageButton;
 
 public class MapActivity extends BaseMenuActivity implements View.OnClickListener {
 
-    ImageButton resultsButton;
-    ImageButton messagesButton;
-    ImageButton menuButton;
-    ImageButton mapsButton;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,23 +21,15 @@ public class MapActivity extends BaseMenuActivity implements View.OnClickListene
         // Make sure the toolbar exists in the activity and is not null
         setSupportActionBar(toolbar);
 
+        messagesButton = (ImageButton) findViewById(R.id.imgMenuMessages);
         mapsButton = (ImageButton) findViewById(R.id.imgMenuMap);
         resultsButton = (ImageButton) findViewById(R.id.imgMenuResults);
-        messagesButton = (ImageButton) findViewById(R.id.imgMenuMessages);
-        menuButton = (ImageButton) findViewById(R.id.imgMenuMenu);
+        profileButton = (ImageButton) findViewById(R.id.imgMenuProfile);
 
-        resultsButton.setOnClickListener(this);
         messagesButton.setOnClickListener(this);
-
-        menuButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                PopupMenu popupMenu = new PopupMenu(MapActivity.this, view);
-                popupMenu.setOnMenuItemClickListener(MapActivity.this);
-                popupMenu.inflate(R.menu.popup_menu);
-                popupMenu.show();
-            }
-        });
+        mapsButton.setOnClickListener(this);
+        resultsButton.setOnClickListener(this);
+        profileButton.setOnClickListener(this);
 
     }
 
@@ -56,6 +43,10 @@ public class MapActivity extends BaseMenuActivity implements View.OnClickListene
             case R.id.imgMenuMessages:
                 Intent intentMessages = new Intent(MapActivity.this, MessagesActivity.class);
                 startActivity(intentMessages);
+                break;
+            case R.id.imgMenuProfile:
+                Intent intentProfile = new Intent(MapActivity.this, ProfileActivity.class);
+                startActivity(intentProfile);
                 break;
         }
     }

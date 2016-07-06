@@ -13,14 +13,22 @@
 
     <!-- Rest of content for the activity -->
 
+    <ScrollView
+        android:id="@+id/notificationSettingsForm"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/imgMessages"
         android:src="@drawable/socialmediapage"
         android:layout_weight="1"
+        android:layout_marginTop="70dp"
         />
 
+    </ScrollView>
 
     <LinearLayout
         android:orientation="horizontal"

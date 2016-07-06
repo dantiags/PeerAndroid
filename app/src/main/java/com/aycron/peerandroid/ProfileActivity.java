@@ -10,10 +10,6 @@ import android.widget.ImageButton;
 
 public class ProfileActivity extends BaseMenuActivity  implements View.OnClickListener{
 
-    ImageButton mapsButton;
-    ImageButton messagesButton;
-    ImageButton menuButton;
-    ImageButton resultsButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,21 +26,11 @@ public class ProfileActivity extends BaseMenuActivity  implements View.OnClickLi
         messagesButton = (ImageButton) findViewById(R.id.imgMenuMessages);
         mapsButton = (ImageButton) findViewById(R.id.imgMenuMap);
         resultsButton = (ImageButton) findViewById(R.id.imgMenuResults);
-        menuButton = (ImageButton) findViewById(R.id.imgMenuMenu);
 
         messagesButton.setOnClickListener(this);
         mapsButton.setOnClickListener(this);
         resultsButton.setOnClickListener(this);
 
-        menuButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                PopupMenu popupMenu = new PopupMenu(ProfileActivity.this, view);
-                popupMenu.setOnMenuItemClickListener(ProfileActivity.this);
-                popupMenu.inflate(R.menu.popup_menu);
-                popupMenu.show();
-            }
-        });
     }
 
     @Override
