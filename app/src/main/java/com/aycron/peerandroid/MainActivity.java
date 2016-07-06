@@ -41,8 +41,10 @@ public class MainActivity extends AppCompatActivity {
             public void onFinish() {
                 i++;
                 firstBar.setProgress(i);
-                Intent myIntent = new Intent(MainActivity.this, HomeActivity.class);
+                //Intent myIntent = new Intent(MainActivity.this, HomeActivity.class);
+                Intent myIntent = new Intent(MainActivity.this, LoginActivity.class);
                 MainActivity.this.startActivity(myIntent);
+
             }
         }.start();
 
