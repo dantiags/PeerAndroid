@@ -24,8 +24,6 @@ public class MapActivity extends BaseMenuActivity implements View.OnClickListene
         messagesButton = (ImageButton) findViewById(R.id.imgMenuMessages);
         menuButton = (ImageButton) findViewById(R.id.imgMenuMenu);
 
-        mapsButton.setImageResource(R.drawable.menumap);
-
         resultsButton.setOnClickListener(this);
         messagesButton.setOnClickListener(this);
 

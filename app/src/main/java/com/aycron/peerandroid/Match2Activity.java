@@ -28,7 +28,6 @@ public class Match2Activity extends BaseMenuActivity implements View.OnClickList
         yesButton = (ImageButton) findViewById(R.id.imageYes);
         noButton = (ImageButton) findViewById(R.id.imageNo);
 
-        resultsButton.setImageResource(R.drawable.menuresults);
 
         mapsButton.setOnClickListener(this);
         messagesButton.setOnClickListener(this);

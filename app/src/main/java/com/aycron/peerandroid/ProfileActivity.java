@@ -25,8 +25,6 @@ public class ProfileActivity extends BaseMenuActivity  implements View.OnClickLi
         resultsButton = (ImageButton) findViewById(R.id.imgMenuResults);
         menuButton = (ImageButton) findViewById(R.id.imgMenuMenu);
 
-        menuButton.setImageResource(R.drawable.menumenu);
-
         messagesButton.setOnClickListener(this);
         mapsButton.setOnClickListener(this);
         resultsButton.setOnClickListener(this);

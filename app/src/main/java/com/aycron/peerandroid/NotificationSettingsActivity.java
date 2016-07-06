@@ -29,8 +29,6 @@ public class NotificationSettingsActivity extends BaseMenuActivity  implements V
         menuButton = (ImageButton) findViewById(R.id.imgMenuMenu);
         saveButton = (Button) findViewById(R.id.btnSaveNotificationSettings);
 
-        menuButton.setImageResource(R.drawable.menumenu);
-
         messagesButton.setOnClickListener(this);
         mapsButton.setOnClickListener(this);
         resultsButton.setOnClickListener(this);

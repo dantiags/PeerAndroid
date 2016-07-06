@@ -33,8 +33,6 @@ public class HomeActivity extends BaseMenuActivity  implements OnClickListener {
         yesButton = (ImageButton) findViewById(R.id.imageYes);
         noButton = (ImageButton) findViewById(R.id.imageNo);
 
-        resultsButton.setImageResource(R.drawable.menuresults);
-
         mapsButton.setOnClickListener(this);
         messagesButton.setOnClickListener(this);
         yesButton.setOnClickListener(this);

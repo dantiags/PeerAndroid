@@ -24,8 +24,6 @@ public class SocialMediaLinkActivity extends BaseMenuActivity  implements View.O
         resultsButton = (ImageButton) findViewById(R.id.imgMenuResults);
         menuButton = (ImageButton) findViewById(R.id.imgMenuMenu);
 
-        menuButton.setImageResource(R.drawable.menumenu);
-
         messagesButton.setOnClickListener(this);
         mapsButton.setOnClickListener(this);
         resultsButton.setOnClickListener(this);

@@ -10,44 +10,40 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:background="#FFFFFF"
+        android:background="#00BCD5"
+        android:layout_marginTop="5dp"
         >
 
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/imgMenuResults"
-            android:src="@drawable/menuresults_disabled"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:src="@drawable/resultsicon"
+            android:background="@null" />
 
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/imgMenuMap"
-            android:src="@drawable/menumap_disabled"
-            android:layout_alignParentBottom="true"
-            android:layout_toRightOf="@+id/imgMenuResults"
-            android:layout_toEndOf="@+id/imgMenuResults" />
+            android:src="@drawable/mapicon"
+            android:background="@null"
+            />
 
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/imgMenuMessages"
-            android:src="@drawable/menumessages_disabled"
-            android:layout_alignParentBottom="true"
-            android:layout_toLeftOf="@+id/imageYes"
-            android:layout_toStartOf="@+id/imageYes" />
+            android:src="@drawable/messagesicon"
+            android:background="@null"
+            />
 
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/imgMenuMenu"
-            android:src="@drawable/menumenu_disabled"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
+            android:src="@drawable/profileicon"
+            android:background="@null"
+            />
 
 
     </LinearLayout>
