@@ -46,7 +46,8 @@ public class BaseMenuActivity extends AppCompatActivity implements PopupMenu.OnM
                 popupMenu.show();
                 break;
             default:
-                return super.onOptionsItemSelected(item);
+                Toast.makeText(this, item.getItemId() + " Clicked", Toast.LENGTH_SHORT).show();
+                break;
         }
         return false;
     }
