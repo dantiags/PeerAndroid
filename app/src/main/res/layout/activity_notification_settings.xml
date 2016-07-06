@@ -5,6 +5,14 @@
     android:layout_height="match_parent"
     tools:context="com.aycron.peerandroid.NotificationSettingsActivity">
 
+    <!-- Load the toolbar here -->
+    <include
+        layout="@layout/toolbar_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- Rest of content for the activity -->
+
 
     <GridLayout
         android:layout_width="match_parent"
@@ -13,7 +21,11 @@
         android:orientation="horizontal"
         android:rowCount="6"
         android:id="@+id/gridLayoutNotificationSettings"
-        android:layout_margin="30dp">
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="100dp"
+        >
 
         <TextView
             android:layout_width="wrap_content"

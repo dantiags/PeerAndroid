@@ -8,6 +8,14 @@
     tools:context="com.aycron.peerandroid.MapActivity"
     android:weightSum="1">
 
+    <!-- Load the toolbar here -->
+    <include
+        layout="@layout/toolbar_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- Rest of content for the activity -->
+
 
     <ImageView
         android:layout_width="match_parent"
