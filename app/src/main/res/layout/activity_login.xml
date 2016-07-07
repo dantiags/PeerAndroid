@@ -39,21 +39,16 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <ImageView
-                android:paddingTop="200dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/socialsearchlogo"
-                android:layout_gravity="center_horizontal"
-                />
 
-            <Button
+            <ImageButton
                 android:id="@+id/email_sign_in_button"
                 style="?android:textAppearanceSmall"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:src="@drawable/facebook_button"
+                android:layout_marginTop="400dp"
                 android:text="@string/action_sign_in"
+                android:background="@null"
                 android:textStyle="bold" />
 
         </LinearLayout>
