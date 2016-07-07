@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context="com.aycron.peerandroid.NotificationSettingsActivity">
 
     <!-- Load the toolbar here -->
@@ -24,7 +25,7 @@
             android:layout_height="wrap_content"
             android:columnCount="2"
             android:orientation="horizontal"
-            android:rowCount="6"
+            android:rowCount="10"
             android:id="@+id/gridLayoutNotificationSettings"
             android:layout_marginBottom="30dp"
             android:layout_marginLeft="30dp"
@@ -49,6 +50,17 @@
                 android:layout_gravity="fill"
                 android:id="@+id/switchLikes"/>
 
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:background="#c0c0c0"
+                android:layout_columnSpan="2"
+                android:layout_rowSpan="1"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                />
+
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -65,6 +77,16 @@
                 android:text=""
                 android:layout_gravity="fill"
                 android:id="@+id/switchNewMatches"/>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:background="#c0c0c0"
+                android:layout_columnSpan="2"
+                android:layout_rowSpan="1"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                />
 
 
             <TextView
@@ -83,6 +105,17 @@
                 android:text=""
                 android:layout_gravity="fill"
                 android:id="@+id/switchMessages"/>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:background="#c0c0c0"
+                android:layout_columnSpan="2"
+                android:layout_rowSpan="1"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -100,6 +133,16 @@
                 android:layout_gravity="fill"
                 android:id="@+id/switchAnonymousMessages"/>
 
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:background="#c0c0c0"
+                android:layout_columnSpan="2"
+                android:layout_rowSpan="1"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                />
+
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -109,6 +152,8 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_rowSpan="1"
                 android:id="@+id/btnSaveNotificationSettings"
+                android:background="@color/colorPrimary"
+                android:textColor="#FFFFFF"
                 android:layout_marginTop="50dp" />
 
         </GridLayout>

@@ -6,9 +6,12 @@ import android.os.Bundle;
 import android.support.v7.widget.PopupMenu;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 public class QuickSearchActivity extends BaseMenuActivity implements View.OnClickListener {
+
+    Button searchButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,10 +29,13 @@ public class QuickSearchActivity extends BaseMenuActivity implements View.OnClic
         resultsButton = (ImageButton) findViewById(R.id.imgMenuResults);
         profileButton = (ImageButton) findViewById(R.id.imgMenuProfile);
 
+        searchButton = (Button) findViewById(R.id.btnSearch);
+
         messagesButton.setOnClickListener(this);
         mapsButton.setOnClickListener(this);
         resultsButton.setOnClickListener(this);
         profileButton.setOnClickListener(this);
+        searchButton.setOnClickListener(this);
 
     }
 
@@ -52,6 +58,10 @@ public class QuickSearchActivity extends BaseMenuActivity implements View.OnClic
             case R.id.imgMenuProfile:
                 Intent intentProfile = new Intent(QuickSearchActivity.this, ProfileActivity.class);
                 startActivity(intentProfile);
+                break;
+            case R.id.btnSearch:
+                Intent makeAMatch = new Intent(QuickSearchActivity.this, MakeAMatchActivity.class);
+                startActivity(makeAMatch);
                 break;
         }
     }
