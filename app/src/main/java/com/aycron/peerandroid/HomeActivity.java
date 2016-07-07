@@ -16,6 +16,7 @@ public class HomeActivity extends BaseMenuActivity  implements OnClickListener {
 
     ImageButton yesButton;
     ImageButton noButton;
+    ImageButton matchImage;
 
 
     @Override
@@ -33,6 +34,7 @@ public class HomeActivity extends BaseMenuActivity  implements OnClickListener {
         messagesButton = (ImageButton) findViewById(R.id.imgMenuMessages);
         profileButton = (ImageButton) findViewById(R.id.imgMenuProfile);
         resultsButton = (ImageButton) findViewById(R.id.imgMenuResults);
+        matchImage = (ImageButton) findViewById(R.id.imgMainPicture);
         yesButton = (ImageButton) findViewById(R.id.imageYes);
         noButton = (ImageButton) findViewById(R.id.imageNo);
 
@@ -41,7 +43,9 @@ public class HomeActivity extends BaseMenuActivity  implements OnClickListener {
         profileButton.setOnClickListener(this);
         yesButton.setOnClickListener(this);
         noButton.setOnClickListener(this);
+        matchImage.setOnClickListener(this);
 
+        matchImage.setTag(R.drawable.match_photo1);
 
     }
 
@@ -64,14 +68,34 @@ public class HomeActivity extends BaseMenuActivity  implements OnClickListener {
                 break;
 
             case R.id.imageYes:
-                Intent intentNextMatchYes = new Intent(HomeActivity.this, Match2Activity.class);
-                startActivity(intentNextMatchYes);
+                changeMatchPicture((Integer)matchImage.getTag());
                 break;
-
             case R.id.imageNo:
-                Intent intentNextMatchNo = new Intent(HomeActivity.this, Match2Activity.class);
-                startActivity(intentNextMatchNo);
+                changeMatchPicture((Integer)matchImage.getTag());
                 break;
+            case R.id.imgMainPicture:
+                changeDetailsPicture((Integer)matchImage.getTag());
+                break;
+        }
+    }
+
+    private void changeMatchPicture(Integer resource){
+        if (resource == R.drawable.match_photo1 || resource == R.drawable.match_photo1_details){
+            matchImage.setImageResource(R.drawable.match_photo2);
+            matchImage.setTag(R.drawable.match_photo2);
+        }else  {
+            matchImage.setImageResource(R.drawable.match_photo1);
+            matchImage.setTag(R.drawable.match_photo1);
+        }
+    }
+
+    private void changeDetailsPicture(Integer resource){
+        if (resource == R.drawable.match_photo1){
+            matchImage.setImageResource(R.drawable.match_photo1_details);
+            matchImage.setTag(R.drawable.match_photo1_details);
+        }else  {
+            matchImage.setImageResource(R.drawable.match_photo1);
+            matchImage.setTag(R.drawable.match_photo1);
         }
     }
 }
