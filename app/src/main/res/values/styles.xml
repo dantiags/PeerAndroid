@@ -1,5 +1,13 @@
 <resources>
 
+    <style name="CustomMenuItem">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">50sp</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:background">#FFFFFF</item>
+    </style>
+
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
@@ -9,19 +17,7 @@
         <item name="android:textColorPrimary">@color/primary_text_material_light</item>
         <item name="android:textColorSecondary">@color/secondary_text_material_light</item>
         <item name="android:popupMenuStyle">@style/CustomMenuItem</item>
-        <!--
-        <item name="android:popupAnimationStyle"></item>
-        -->
-        <item name="android:popupBackground">@style/CustomMenuItem</item>
 
-    </style>
-
-    <style name="CustomMenuItem">
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">50sp</item>
-        <item name="android:textColor">@color/colorAccent</item>
-        <item name="android:background">#FFFFFF</item>
     </style>
 
     <style name="FullscreenTheme" parent="AppTheme">

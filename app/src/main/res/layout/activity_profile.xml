@@ -13,17 +13,13 @@
 
     <!-- Rest of content for the activity -->
 
-    <LinearLayout
-        android:focusable="true"
-        android:focusableInTouchMode="true"
-        android:layout_width="0px"
-        android:layout_height="0px"/>
-
     <ScrollView
         android:id="@+id/profileForm"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/toolbar"
+        android:background="#FFFFFF"
+        android:layout_above="@+id/menuBar"
         >
 
         <GridLayout
@@ -33,6 +29,8 @@
             android:rowCount="10"
             android:id="@+id/gridLayoutProfile"
             android:layout_margin="20dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
             >
 
             <Button
@@ -46,8 +44,8 @@
                 android:textColor="#FFFFFF"
                 android:layout_row="0"
                 android:layout_column="0"
-                android:paddingRight="25dp"
-                android:paddingLeft="25dp"
+                android:paddingRight="20dp"
+                android:paddingLeft="20dp"
                 />
 
             <Button
@@ -61,8 +59,8 @@
                 android:layout_row="0"
                 android:layout_column="2"
                 android:layout_columnSpan="1"
-                android:paddingRight="25dp"
-                android:paddingLeft="25dp"
+                android:paddingRight="20dp"
+                android:paddingLeft="20dp"
                 />
 
             <ImageView

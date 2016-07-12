@@ -38,6 +38,7 @@ public class ProfileActivity extends BaseMenuActivity  implements View.OnClickLi
         mapsButton.setOnClickListener(this);
         resultsButton.setOnClickListener(this);
         btnSearch.setOnClickListener(this);
+        btnSave.setOnClickListener(this);
 
     }
 
