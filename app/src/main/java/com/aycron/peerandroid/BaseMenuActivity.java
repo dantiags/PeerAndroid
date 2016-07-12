@@ -45,8 +45,12 @@ public class BaseMenuActivity extends AppCompatActivity implements PopupMenu.OnM
                 popupMenu.inflate(R.menu.popup_menu);
                 popupMenu.show();
                 break;
+            case R.id.miConfig:
+                Intent notificationIntent = new Intent(BaseMenuActivity.this, NotificationSettingsActivity.class);
+                startActivity(notificationIntent);
+                break;
             default:
-                Toast.makeText(this, item.getItemId() + " Clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Not Mapped", Toast.LENGTH_SHORT).show();
                 break;
         }
         return false;
@@ -81,9 +85,8 @@ public class BaseMenuActivity extends AppCompatActivity implements PopupMenu.OnM
                 Intent socialIntent = new Intent(BaseMenuActivity.this, SocialMediaLinkActivity.class);
                 startActivity(socialIntent);
                 break;
-            case R.id.item_notification:
-                Intent notificationIntent = new Intent(BaseMenuActivity.this, NotificationSettingsActivity.class);
-                startActivity(notificationIntent);
+            default:
+                Toast.makeText(this, "Not Mapped", Toast.LENGTH_SHORT).show();
                 break;
         }
         return true;

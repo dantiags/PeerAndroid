@@ -1,6 +1,7 @@
 package com.aycron.peerandroid;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.PopupMenu;
@@ -9,6 +10,8 @@ import android.view.View;
 import android.widget.ImageButton;
 
 public class SocialMediaLinkActivity extends BaseMenuActivity  implements View.OnClickListener{
+
+    ImageButton socialMediaButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,11 +28,13 @@ public class SocialMediaLinkActivity extends BaseMenuActivity  implements View.O
         mapsButton = (ImageButton) findViewById(R.id.imgMenuMap);
         resultsButton = (ImageButton) findViewById(R.id.imgMenuResults);
         profileButton = (ImageButton) findViewById(R.id.imgMenuProfile);
+        socialMediaButton = (ImageButton) findViewById(R.id.imgFoursquare);
 
         messagesButton.setOnClickListener(this);
         mapsButton.setOnClickListener(this);
         resultsButton.setOnClickListener(this);
         profileButton.setOnClickListener(this);
+        socialMediaButton.setOnClickListener(this);
     }
 
     @Override
@@ -50,6 +55,11 @@ public class SocialMediaLinkActivity extends BaseMenuActivity  implements View.O
             case R.id.imgMenuProfile:
                 Intent intentProfile = new Intent(SocialMediaLinkActivity.this, ProfileActivity.class);
                 startActivity(intentProfile);
+                break;
+            case R.id.imgFoursquare:
+                Uri uriUrl = Uri.parse("https://foursquare.com/here");
+                Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
+                startActivity(launchBrowser);
                 break;
         }
     }

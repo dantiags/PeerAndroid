@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context="com.aycron.peerandroid.SocialMediaLinkActivity">
 
     <!-- Load the toolbar here -->
@@ -20,13 +21,13 @@
         android:layout_below="@+id/toolbar"
         >
 
-    <ImageView
+    <ImageButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/imgMessages"
-        android:src="@drawable/socialmediapage"
-        android:layout_weight="1"
-        android:layout_marginTop="70dp"
+        android:id="@+id/imgFoursquare"
+        android:src="@drawable/foursquare_button"
+        android:layout_gravity="center_vertical"
+        android:background="@null"
         />
 
     </ScrollView>
