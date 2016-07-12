@@ -6,10 +6,14 @@ import android.os.Bundle;
 import android.support.v7.widget.PopupMenu;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 public class ProfileActivity extends BaseMenuActivity  implements View.OnClickListener{
 
+    Button btnSearch;
+    Button btnSave;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,9 +31,13 @@ public class ProfileActivity extends BaseMenuActivity  implements View.OnClickLi
         mapsButton = (ImageButton) findViewById(R.id.imgMenuMap);
         resultsButton = (ImageButton) findViewById(R.id.imgMenuResults);
 
+        btnSearch = (Button) findViewById(R.id.btnProfileSearchSettings);
+        btnSave = (Button) findViewById(R.id.btnProfileSave);
+
         messagesButton.setOnClickListener(this);
         mapsButton.setOnClickListener(this);
         resultsButton.setOnClickListener(this);
+        btnSearch.setOnClickListener(this);
 
     }
 
@@ -47,6 +55,13 @@ public class ProfileActivity extends BaseMenuActivity  implements View.OnClickLi
             case R.id.imgMenuMap:
                 Intent intentMap = new Intent(ProfileActivity.this, MapActivity.class);
                 startActivity(intentMap);
+                break;
+            case R.id.btnProfileSearchSettings:
+                Intent intentQuickSearch = new Intent(ProfileActivity.this, QuickSearchActivity.class);
+                startActivity(intentQuickSearch);
+                break;
+            case R.id.btnProfileSave:
+                Toast.makeText(this, "Profile Saved!!", Toast.LENGTH_LONG).show();
                 break;
         }
     }

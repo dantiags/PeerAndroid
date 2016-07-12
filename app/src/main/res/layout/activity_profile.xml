@@ -13,6 +13,12 @@
 
     <!-- Rest of content for the activity -->
 
+    <LinearLayout
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="0px"
+        android:layout_height="0px"/>
+
     <ScrollView
         android:id="@+id/profileForm"
         android:layout_width="match_parent"
@@ -20,24 +26,134 @@
         android:layout_below="@+id/toolbar"
         >
 
-        <ImageView
+        <GridLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/imgMessages"
-            android:src="@drawable/profilepage"
-            android:layout_weight="1"
-            android:layout_marginTop="70dp"
-            />
+            android:columnCount="3"
+            android:rowCount="10"
+            android:id="@+id/gridLayoutProfile"
+            android:layout_margin="20dp"
+            >
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnProfileProfile"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="My Profile"
+                android:layout_columnSpan="1"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="#FFFFFF"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:paddingRight="25dp"
+                android:paddingLeft="25dp"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnProfileSearchSettings"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Search Settings"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="#FFFFFF"
+                android:layout_row="0"
+                android:layout_column="2"
+                android:layout_columnSpan="1"
+                android:paddingRight="25dp"
+                android:paddingLeft="25dp"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imgProfile"
+                android:src="@drawable/profile_photo1"
+                android:layout_columnSpan="3"
+                android:textColor="#FFFFFF"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:padding="25dp"
+                android:layout_gravity="center_horizontal"
+
+                />
+
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Michael Reed"
+                android:ems="100"
+                android:id="@+id/txtProfileName"
+                android:layout_columnSpan="3"
+                android:layout_row="2"
+                android:layout_column="0" />
+
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:inputType="textEmailAddress"
+                android:ems="100"
+                android:text="mrbrbook@gmail.com"
+                android:id="@+id/txtProfileEmail"
+                android:layout_columnSpan="3"
+                android:layout_row="3"
+                android:layout_column="0" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="date"
+                android:ems="100"
+                android:text="12/24/1973"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/txtProfileDate"
+                android:layout_columnSpan="3"
+                android:layout_row="4"
+                android:layout_column="0" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:ems="100"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Personal Description"
+                android:id="@+id/txtProfileDescription"
+                android:layout_columnSpan="3"
+                android:layout_row="5"
+                android:layout_column="0" />
+
+
+        </GridLayout>
     </ScrollView>
+
     <LinearLayout
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:background="#FFFFFF"
+        android:id="@+id/menuBar"
         >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:id="@+id/btnProfileSave"
+            android:background="@color/colorPrimary"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:textColor="#FFFFFF"/>
+
         <include layout="@layout/menu_bar_layout" >
 
         </include>
