@@ -57,7 +57,7 @@ public class SocialMediaLinkActivity extends BaseMenuActivity  implements View.O
                 startActivity(intentProfile);
                 break;
             case R.id.imgFoursquare:
-                Uri uriUrl = Uri.parse("https://foursquare.com/here");
+                Uri uriUrl = Uri.parse("https://foursquare.com/login");
                 Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
                 startActivity(launchBrowser);
                 break;
