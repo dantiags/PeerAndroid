@@ -13,15 +13,6 @@
 
     <!-- Rest of content for the activity -->
 
-<ListView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:id="@+id/listViewMessages"
-    >
-
-
-</ListView>
-
 
     <LinearLayout
         android:orientation="horizontal"
