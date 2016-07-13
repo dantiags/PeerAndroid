@@ -12,16 +12,12 @@
         android:layout_height="wrap_content"/>
 
     <!-- Rest of content for the activity -->
-
-    <ScrollView
-        android:id="@+id/messagesForm"
+    
+    <ListView
+        android:id="@+id/lvMessages"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/toolbar"
-        >
+        android:layout_height="wrap_content"></ListView>
 
-
-    </ScrollView>
 
     <LinearLayout
         android:orientation="horizontal"

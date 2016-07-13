@@ -13,15 +13,15 @@
 
     <!-- Rest of content for the activity -->
 
-    <ScrollView
-        android:id="@+id/makeAMatchForm"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/toolbar"
-        >
+<ListView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/listViewMessages"
+    >
 
 
-    </ScrollView>
+</ListView>
+
 
     <LinearLayout
         android:orientation="horizontal"

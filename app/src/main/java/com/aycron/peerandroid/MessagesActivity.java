@@ -8,8 +8,14 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.View.*;
 import android.widget.ImageButton;
+import android.widget.ListView;
+
+import com.aycron.peerandroid.model.Message;
+import com.aycron.peerandroid.model.MessagesAdapter;
 
 public class MessagesActivity extends BaseMenuActivity  implements OnClickListener{
+
+    ListView lv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +37,43 @@ public class MessagesActivity extends BaseMenuActivity  implements OnClickListen
         mapsButton.setOnClickListener(this);
         resultsButton.setOnClickListener(this);
         profileButton.setOnClickListener(this);
+
+        Message messages[] = new Message[]{
+                new Message(R.mipmap.ic_launcher, "Hello! How are you?"),
+                new Message(R.mipmap.ic_launcher, "Hello! How are you?"),
+                new Message(R.mipmap.ic_launcher, "Hello! How are you?"),
+                new Message(R.mipmap.ic_launcher, "Hello! How are you?"),
+                new Message(R.mipmap.ic_launcher, "Hello! How are you?"),
+                new Message(R.mipmap.ic_launcher, "Hello! How are you?"),
+                new Message(R.mipmap.ic_launcher, "Hello! How are you?"),
+                new Message(R.mipmap.ic_launcher, "Hello! How are you?"),
+                new Message(R.mipmap.ic_launcher, "Hello! How are you?"),
+                new Message(R.mipmap.ic_launcher, "Hello! How are you?"),
+                new Message(R.mipmap.ic_launcher, "Hello! How are you?"),
+                new Message(R.mipmap.ic_launcher, "Hello! How are you?"),
+                new Message(R.mipmap.ic_launcher, "Hello! How are you?"),
+                new Message(R.mipmap.ic_launcher, "Hello! How are you?"),
+                new Message(R.mipmap.ic_launcher, "Hello! How are you?"),
+                new Message(R.mipmap.ic_launcher, "Hello! How are you?"),
+                new Message(R.mipmap.ic_launcher, "Hello! How are you?"),
+                new Message(R.mipmap.ic_launcher, "Hello! How are you?"),
+                new Message(R.mipmap.ic_launcher, "Hello! How are you?"),
+                new Message(R.mipmap.ic_launcher, "Hello! How are you?"),
+                new Message(R.mipmap.ic_launcher, "Hello! How are you?"),
+                new Message(R.mipmap.ic_launcher, "Hello! How are you?"),
+                new Message(R.mipmap.ic_launcher, "Hello! How are you?"),
+                new Message(R.mipmap.ic_launcher, "Hello! How are you?"),
+                new Message(R.mipmap.ic_launcher, "Hello! How are you?"),
+                new Message(R.mipmap.ic_launcher, "Hello! How are you?"),
+                new Message(R.mipmap.ic_launcher, "Hello! How are you?"),
+        };
+
+        MessagesAdapter adapter = new MessagesAdapter(this, R.layout.listview_item_row, messages);
+        lv = (ListView) this.findViewById(R.id.lvMessages);
+        View header = (View) getLayoutInflater().inflate(R.layout.list_header_row, null);
+        lv.addHeaderView(header);
+        lv.setAdapter(adapter);
+
 
     }
 
