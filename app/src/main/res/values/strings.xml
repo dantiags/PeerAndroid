@@ -3,4 +3,18 @@
     <string name="title_activity_login">Sign in</string>
     <string name="action_sign_in">Login on Facebook</string>
 
+    <string-array name="relationship_status">
+        <item>Single</item>
+        <item>Married</item>
+        <item>In a relationship</item>
+        <item>It\'s complicated</item>
+    </string-array>
+
+    <string-array name="search_area">
+        <item>All</item>
+        <item>10 Km.</item>
+        <item>20 Km.</item>
+        <item>30 Km</item>
+    </string-array>
+
 </resources>

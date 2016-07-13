@@ -6,8 +6,10 @@ import android.os.Bundle;
 import android.support.v7.widget.PopupMenu;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.Spinner;
 
 public class QuickSearchActivity extends BaseMenuActivity implements View.OnClickListener {
 
@@ -36,6 +38,22 @@ public class QuickSearchActivity extends BaseMenuActivity implements View.OnClic
         resultsButton.setOnClickListener(this);
         profileButton.setOnClickListener(this);
         searchButton.setOnClickListener(this);
+
+        Spinner spinnerSearchArea = (Spinner) findViewById(R.id.spinnerSearchArea);
+        // Create an ArrayAdapter using the string array and a default spinner layout
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.search_area, android.R.layout.simple_spinner_item);
+        // Specify the layout to use when the list of choices appears
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        // Apply the adapter to the spinner
+        spinnerSearchArea.setAdapter(adapter);
+
+        Spinner spinnerRelationShipStatus = (Spinner) findViewById(R.id.spinnerRelationshipStatus);
+        // Create an ArrayAdapter using the string array and a default spinner layout
+        ArrayAdapter<CharSequence> adapterRS = ArrayAdapter.createFromResource(this, R.array.relationship_status, android.R.layout.simple_spinner_item);
+        // Specify the layout to use when the list of choices appears
+        adapterRS.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        // Apply the adapter to the spinner
+        spinnerRelationShipStatus.setAdapter(adapterRS);
 
     }
 
