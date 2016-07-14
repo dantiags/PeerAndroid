@@ -72,8 +72,9 @@ public class BaseMenuActivity extends AppCompatActivity implements PopupMenu.OnM
                 startActivity(quickSearchIntent);
                 break;
             case R.id.item_match:
-                Intent intentMatch = new Intent(BaseMenuActivity.this, MakeAMatchActivity.class);
-                startActivity(intentMatch);
+                /*Intent intentMatch = new Intent(BaseMenuActivity.this, MakeAMatchActivity.class);
+                startActivity(intentMatch);*/
+                Toast.makeText(this, "Under Construction", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.item_rate:
                 Toast.makeText(this, "Rate Clicked", Toast.LENGTH_SHORT).show();

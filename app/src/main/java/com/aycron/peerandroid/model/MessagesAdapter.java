@@ -40,6 +40,7 @@ public class MessagesAdapter extends ArrayAdapter<Message> {
             holder = new MessageHolder();
             holder.image = (ImageView) row.findViewById(R.id.lvimage);
             holder.text = (TextView) row.findViewById(R.id.lvtxt);
+            holder.name = (TextView) row.findViewById(R.id.lvName);
             row.setTag(holder);
         }else{
             holder = (MessageHolder) row.getTag();
@@ -48,6 +49,7 @@ public class MessagesAdapter extends ArrayAdapter<Message> {
         Message message = this.messages[position];
         holder.text.setText(message.message);
         holder.image.setImageResource(message.icon);
+        holder.name.setText(message.name);
 
         return row;
     }
@@ -55,6 +57,7 @@ public class MessagesAdapter extends ArrayAdapter<Message> {
     static class MessageHolder {
         ImageView image;
         TextView text;
+        TextView name;
 
     }
 }

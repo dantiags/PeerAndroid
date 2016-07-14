@@ -6,11 +6,13 @@ package com.aycron.peerandroid.model;
 public class Message {
 
     public int icon;
+    public String name;
     public String message;
 
-    public Message(int icon, String message){
+    public Message(int icon,String name, String message){
         super();
         this.icon = icon;
         this.message = message;
+        this.name = name;
     }
 }

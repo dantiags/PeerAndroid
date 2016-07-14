@@ -39,33 +39,11 @@ public class MessagesActivity extends BaseMenuActivity  implements OnClickListen
         profileButton.setOnClickListener(this);
 
         Message messages[] = new Message[]{
-                new Message(R.mipmap.ic_launcher, "Hello! How are you?"),
-                new Message(R.mipmap.ic_launcher, "Hello! How are you?"),
-                new Message(R.mipmap.ic_launcher, "Hello! How are you?"),
-                new Message(R.mipmap.ic_launcher, "Hello! How are you?"),
-                new Message(R.mipmap.ic_launcher, "Hello! How are you?"),
-                new Message(R.mipmap.ic_launcher, "Hello! How are you?"),
-                new Message(R.mipmap.ic_launcher, "Hello! How are you?"),
-                new Message(R.mipmap.ic_launcher, "Hello! How are you?"),
-                new Message(R.mipmap.ic_launcher, "Hello! How are you?"),
-                new Message(R.mipmap.ic_launcher, "Hello! How are you?"),
-                new Message(R.mipmap.ic_launcher, "Hello! How are you?"),
-                new Message(R.mipmap.ic_launcher, "Hello! How are you?"),
-                new Message(R.mipmap.ic_launcher, "Hello! How are you?"),
-                new Message(R.mipmap.ic_launcher, "Hello! How are you?"),
-                new Message(R.mipmap.ic_launcher, "Hello! How are you?"),
-                new Message(R.mipmap.ic_launcher, "Hello! How are you?"),
-                new Message(R.mipmap.ic_launcher, "Hello! How are you?"),
-                new Message(R.mipmap.ic_launcher, "Hello! How are you?"),
-                new Message(R.mipmap.ic_launcher, "Hello! How are you?"),
-                new Message(R.mipmap.ic_launcher, "Hello! How are you?"),
-                new Message(R.mipmap.ic_launcher, "Hello! How are you?"),
-                new Message(R.mipmap.ic_launcher, "Hello! How are you?"),
-                new Message(R.mipmap.ic_launcher, "Hello! How are you?"),
-                new Message(R.mipmap.ic_launcher, "Hello! How are you?"),
-                new Message(R.mipmap.ic_launcher, "Hello! How are you?"),
-                new Message(R.mipmap.ic_launcher, "Hello! How are you?"),
-                new Message(R.mipmap.ic_launcher, "Hello! How are you?"),
+                new Message(R.drawable.girl1, "Jennifer Roberts", "Hello! How are you?"),
+                new Message(R.drawable.girl2, "Sandra  Kampfer", "Nice to meet you!!!"),
+                new Message(R.drawable.girl3, "Selena Rodriguez", "Thanks!!!. See you!"),
+                new Message(R.drawable.girl4, "Monica Atkins", "Hi! I saw you yesterday here..."),
+                new Message(R.drawable.girl5, "Kim Yun", ":)"),
         };
 
         MessagesAdapter adapter = new MessagesAdapter(this, R.layout.listview_item_row, messages);
