@@ -22,6 +22,7 @@
         android:paddingTop="70dp"
         android:paddingRight="20dp"
         android:paddingLeft="20dp"
+        android:paddingBottom="70dp"
         />
 
 
